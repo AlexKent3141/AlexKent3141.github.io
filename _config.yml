@@ -2,3 +2,4 @@ title: My Software Engineering Projects
 description: A blog showcasing my coding projects and technical stuff.
 baseurl: ""
 url: "https://alexkent3141.github.io"
+theme: minima
