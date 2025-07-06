@@ -16,7 +16,7 @@ I'll also introduce a heatmap idea to give us a slightly deeper picture of where
 
 # QBasic
 The QBasic PRNG is a simple Linear Congruential Generator (LCG). Translating into C the code looks like this:
-```
+```c
 uint32_t qbasic(uint32_t* s)
 {
     *s = (*s*0xfd43fd + 0xc39ec3) & 0xffffff;
@@ -82,7 +82,7 @@ The `xorshift` family of PRNGs are some of my favourites: they are simple to imp
 
 I've tested the 32-bit XOR-based version (ref: Algorithm "xor" from p. 4 of Marsaglia, "Xorshift RNGs"):
 
-```
+```c
 uint32_t xorshift32(uint32_t* s)
 {
   *s ^= *s << 13;
