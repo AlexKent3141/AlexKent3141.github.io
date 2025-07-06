@@ -1,0 +1,128 @@
+---
+---
+
+// Import your custom variables BEFORE Minima's core styles
+@import "minima-custom-variables";
+
+// Import the main Minima theme styles
+@import "minima";
+
+/*
+* Add any additional custom CSS rules here for specific neon effects.
+* These rules will be applied AFTER Minima's styles.
+*/
+
+// --- General Layout & Elements ---
+// Apply soft glow to main site sections
+.site-header, .site-footer, .post-item, .page-content {
+  box-shadow: 0 0 5px rgba($brand-color, 0.7);
+}
+
+// Ensure wrapper has consistent padding
+.wrapper {
+  padding: $spacing-unit;
+}
+
+// Add subtle borders to main content areas for separation
+.site-header, .site-footer, .page-content, .post-content {
+  border: 1px solid $grey-color-dark;
+  padding: $spacing-unit / 2;
+  margin-bottom: $spacing-unit;
+}
+
+// --- Headings & Links ---
+// Emphasize headings with brand color and text glow
+h1, h2, h3, h4, h5, h6 {
+  color: $brand-color;
+  text-shadow: 0 0 5px rgba($brand-color, 0.7), 0 0 10px rgba($brand-color, 0.5);
+}
+
+// Style links for a distinct neon look
+a {
+  text-decoration: none; // Remove default underline
+  border-bottom: 1px dashed $link-base-color; // Subtle dashed underline
+  &:hover {
+    text-decoration: none;
+    border-bottom-color: transparent; // Remove dashed line on hover
+    color: $link-hover-color;
+    text-shadow: 0 0 3px $link-hover-color; // Add hover glow
+  }
+}
+
+// --- Site Title Fix ---
+// Ensure the site title has the correct brand color and glow
+.site-title {
+  color: $brand-color;
+  text-shadow: 0 0 5px rgba($brand-color, 0.7), 0 0 10px rgba($brand-color, 0.5);
+}
+
+// --- Code Styling ---
+
+// 1. General styling for ALL `code` elements to reset default Minima appearance.
+// This is still here as a baseline, but the specific inline rule below will take precedence.
+code {
+  font-family: $code-font-family !important;
+  color: $code-text-color !important;
+  text-shadow: 0 0 1px rgba($code-text-color, 0.7) !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+// This targets `code` specifically within common content areas, with very high specificity.
+.post-content code,
+.page-content code {
+  background-color: transparent !important; // Force transparent background
+  color: $code-text-color !important;        // Force neon green text
+  padding: 0 !important;                     // Force no padding
+  border-radius: 0 !important;               // Force no border-radius
+  border: none !important;                   // Force no border
+  // Keep text-shadow and font-family from the generic `code` rule,
+  // or explicitly set them here if they are still not applying.
+  text-shadow: 0 0 1px rgba($code-text-color, 0.7) !important;
+  font-family: $code-font-family !important;
+}
+
+
+// 2. Styling for MULTI-LINE CODE BLOCKS (the outermost container)
+// This rule applies the 'box' appearance to the entire syntax-highlighted block.
+.highlighter-rouge {
+  background-color: $code-background-color !important;
+  color: $code-text-color !important;
+  border: 1px solid $code-text-color !important;
+  padding: 1em !important;
+  border-radius: 3px !important;
+  box-shadow: 0 0 8px rgba($code-text-color, 0.7) !important,
+              inset 0 0 5px rgba($code-text-color, 0.5) !important;
+  margin-bottom: $spacing-unit !important;
+  font-family: $code-font-family !important;
+}
+
+// 3. Styling for the inner elements within MULTI-LINE CODE BLOCKS.
+// This ensures these elements don't introduce their own backgrounds, borders, etc.
+.highlighter-rouge .highlight,
+.highlighter-rouge pre {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  line-height: $base-line-height;
+}
+
+
+// 4. Syntax highlighting classes (colors for different code tokens)
+.highlighter-rouge .c  { color: #777777 !important; font-style: italic; }
+.highlighter-rouge .err { color: #f00 !important; background-color: #faa !important; }
+.highlighter-rouge .k  { color: #00FFFF !important; font-weight: bold !important; }
+.highlighter-rouge .o  { color: #00FFFF !important; }
+.highlighter-rouge .s  { color: #FFD700 !important; }
+.highlighter-rouge .n  { color: $code-text-color !important; }
+.highlighter-rouge .nf { color: $brand-color !important; font-weight: bold !important; }
+.highlighter-rouge .nb { color: $brand-color !important; }
+.highlighter-rouge .bp { color: #99FFFF !important; }
+.highlighter-rouge .mi { color: #99FF99 !important; }
+.highlighter-rouge .mf { color: #99FF99 !important; }
+.highlighter-rouge .mh { color: #99FF99 !important; }
+.highlighter-rouge .il { color: #99FF99 !important; }

@@ -1,0 +1,22 @@
+// --- Custom Minima Variables for Retro Vibe (Cool Neon Cyberpunk) ---
+
+// Colors - REVISED FOR GREEN BASE
+$brand-color:    #00FF00; // Bright Green (primary neon accent)
+$text-color:     #C0C0C0; // Slightly lighter grey for main body text
+$background-color: #0D0D0D; // Very dark charcoal/near black background (for strong contrast)
+$grey-color:     #333333; // Dark grey for borders/meta
+$grey-color-light: #222222; // Slightly lighter dark grey
+$grey-color-dark:  #000000; // Absolute black for deeper shadows
+
+$link-base-color:    #00FFFF; // Cyan (classic pairing with green)
+$link-hover-color:   darken($link-base-color, 10%); // Slightly darker cyan on hover
+$code-background-color: #111111; // Deep dark grey for code blocks
+$code-text-color: #00FF00;       // The same bright green for code text (terminal green)
+
+// Fonts - Still System Fonts (no change here from previous system font option)
+$base-font-family:   -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$header-font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$code-font-family:   'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+// Line height (optional, Minima's default is 1.5)
+// $base-line-height:   1.6;
