@@ -34,7 +34,6 @@
 // Emphasize headings with brand color and text glow
 h1, h2, h3, h4, h5, h6 {
   color: $brand-color;
-  text-shadow: 0 0 5px rgba($brand-color, 0.7), 0 0 10px rgba($brand-color, 0.5);
 }
 
 // Style links for a distinct neon look
@@ -45,15 +44,13 @@ a {
     text-decoration: none;
     border-bottom-color: transparent; // Remove dashed line on hover
     color: $link-hover-color;
-    text-shadow: 0 0 3px $link-hover-color; // Add hover glow
   }
 }
 
 // --- Site Title Fix ---
 // Ensure the site title has the correct brand color and glow
 .site-title {
-  color: $brand-color;
-  text-shadow: 0 0 5px rgba($brand-color, 0.7), 0 0 10px rgba($brand-color, 0.5);
+  color: $brand-color !important;
 }
 
 // --- Code Styling ---
@@ -63,7 +60,6 @@ a {
 code {
   font-family: $code-font-family !important;
   color: $code-text-color !important;
-  text-shadow: 0 0 1px rgba($code-text-color, 0.7) !important;
   background-color: transparent !important;
   padding: 0 !important;
   border-radius: 0 !important;
@@ -78,9 +74,6 @@ code {
   padding: 0 !important;                     // Force no padding
   border-radius: 0 !important;               // Force no border-radius
   border: none !important;                   // Force no border
-  // Keep text-shadow and font-family from the generic `code` rule,
-  // or explicitly set them here if they are still not applying.
-  text-shadow: 0 0 1px rgba($code-text-color, 0.7) !important;
   font-family: $code-font-family !important;
 }
 
