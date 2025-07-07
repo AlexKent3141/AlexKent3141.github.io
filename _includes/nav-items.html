@@ -1,0 +1,7 @@
+<div class="nav-items">
+  {%- for path in include.paths -%}
+  {%- assign hyperpage = site.pages | where: "path", path | first -%}
+  {%- if hyperpage.title %}
+  {%- endif -%}
+  {%- endfor %}
+</div>
