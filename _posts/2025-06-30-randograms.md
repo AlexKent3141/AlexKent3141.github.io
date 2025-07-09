@@ -72,10 +72,12 @@ So why does `rand` seem so much better than the QBasic examples? Well, the C Sta
 
 On my system `rand` is implemented as part of libc, specifically version `GLIBC 2.39-0ubuntu8.4`. I've done some digging and in fact locally my `rand` implements a Linear Feedback Shift Generator (LFSG), which is more sophisticated and has much better randomness properties.
 
+<div markdown="1" class="sidenote-box">
 #### Side note: LCG improvements
 It wouldn't be surprising if another LCG had better properties than the original QBasic implementation. The key improvements we could make are:
 - Use the full 32-bit period: the QBasic implementation is limited to 24-bits for no good reason.
 - Introduce mixing: we can reduce linear dependence between bits by combining different parts of the state using bit shifts and XOR operations.
+</div>
 
 # Xorshift
 The `xorshift` family of PRNGs are some of my favourites: they are simple to implement and behave very nicely. They're actually related to the well-behaving LFSG we saw in the previous section.

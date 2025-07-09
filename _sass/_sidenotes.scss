@@ -1,0 +1,19 @@
+.sidenote-box {
+ // background-color: #1a1a1a; /* A slightly lighter dark background than main content */
+  background-color: #000000; /* A slightly lighter dark background than main content */
+  border: 2px solid #cc00ff; /* Your neon green brand color for the border */
+  padding: 1.5em; /* Space inside the box */
+  margin: 2em 0; /* Space above and below the box to separate it from main text */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 0.9em; /* Slightly smaller font for sidenotes */
+  color: #cccccc; /* A slightly lighter text color for readability in the box */
+
+  /* Optional: Add a subtle text shadow for a more integrated look with your theme */
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.3); /* Subtle green glow */
+
+  /* Optional: Consider if you want headings inside the box to be different */
+  h1, h2, h3, h4, h5, h6 {
+    color: #cc00ff; /* Neon green for headings inside the sidenote */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+  }
+}
