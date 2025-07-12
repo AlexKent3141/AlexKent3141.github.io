@@ -12,7 +12,7 @@ I'll update this post as I flesh out my plan.
 
 For this post I wanted to jot down some ideas for a project that's been on my mind for a while.
 
-Waving Hands is a Pen-and-Paper game that was created by Richard Bartle. I'm not sure exactly when it was created, but the [Rules Document](http://www.gamecabinet.com/rules/WavingHands.html) was last edited in 1994, so before then.
+Waving Hands is a Pen-and-Paper game that was created by Richard Bartle in 1977. A detailed [Rules Document](http://www.gamecabinet.com/rules/WavingHands.html) can be found on Prof. Bartle's website.
 
 In this game you play as a (powerful) wizard who casts spells by making gestures with your hands. You can make gestures with both hands, so you have two streams of spells going on at any given time. The opponent is also casting spells, and you and your opponent's gestures are resolved simultaneously on each turn, making for some interesting interactions.
 
@@ -81,7 +81,7 @@ Being able to fully control the game with your hands would be the ultimate goal.
 
 # Algorithms & tech choices
 #### Programming language
-I like the idea of tackling the Core library and terminal UI in a system programming language. For me `C` is the obvious choice (it probably existed when the game was invented which is kind of nice). I've also done some recent experiments with `Odin` lang, so that's a possibility.
+I like the idea of tackling the Core library and terminal UI in a system programming language. For me `C` is probably my default choice, but I've done some recent experiments with `Odin` lang (which is a modern C successor), so that's also a possibility.
 
 Certainly the Core library should present a `C` interface to make it easy to consume.
 
