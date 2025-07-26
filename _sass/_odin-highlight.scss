@@ -1,0 +1,51 @@
+// Styling for the overall code block container
+.odin-code-block {
+  padding: 1em;
+  border-radius: 5px;
+  margin: 2em 0; /* Space above and below to separate from text */
+  overflow-x: auto; /* Adds horizontal scroll for long lines */
+}
+
+// Ensure pre and code inside this block have proper default styling
+.odin-code-block pre {
+  margin: 0;   /* Remove default margins often applied to <pre> */
+  padding: 0;  /* Remove default padding often applied to <pre> */
+  background-color: #1a1a1a; /* Dark background for the whole block */
+}
+
+.odin-code-block code {
+  font-family: monospace; /* Use a monospaced font */
+  font-size: 0.9em; /* Adjust font size as needed */
+  line-height: 1.4; /* Improve readability */
+  color: #F8F8F2; /* Base color for code text before highlighting */
+  display: block; /* Ensures code takes full width and breaks lines correctly */
+  white-space: pre-wrap; /* Ensures lines wrap if they exceed container width */
+  background-color: #1a1a1a; /* Dark background for the whole block */
+}
+
+.odin-keyword {
+  color: #00FFFF; /* Bright Cyan for keywords */
+  font-weight: bold;
+}
+.odin-type {
+  color: #0000FF; /* Red for types */
+}
+.odin-string {
+  color: #FFFF00; /* Bright Yellow for strings */
+}
+.odin-comment {
+  color: #75715E; /* Desaturated Grey for comments */
+  font-style: italic;
+}
+.odin-function {
+  color: #FF6600; /* Vibrant Orange for function definitions */
+}
+.odin-function-call { // For function calls, distinct from definitions
+  color: #FD971F; /* Slightly different orange */
+}
+.odin-literal {
+  color: #AA00FF; /* Electric Purple for boolean/numeric literals */
+}
+.odin-var-decl { // For variable declarations
+  color: #FF00CC; /* Pink/Magenta for variable declarations */
+}
